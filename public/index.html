@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend - Backend Example</title>
+</head>
+<body>
+    <h1>Hola, estamos en pagina del Frontend!</h1>
+    <button id="fetchBtn">Resibir respuesta del Backend</button>
+    <p id="message"></p>
+
+    <script>
+        document.getElementById('fetchBtn').addEventListener('click', () => {
+            fetch('/api/data')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('message').innerText = data.message;
+                })
+                .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>
