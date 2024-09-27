@@ -7,7 +7,7 @@ app.use(express.json());
 app.use(express.static('public'));
 
 app.get('/api/data', (req, res) => {
-  res.json({ message: "Hola desde Backend!" });
+  res.json({ message: "Hello desde Backend!" });
 });
 
 app.listen(port, () => {
