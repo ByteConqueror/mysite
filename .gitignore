@@ -1,1 +1,16 @@
 node_modules/
+
+*.log
+*.DS_Store
+*.swp
+.vscode/
+.idea/
+
+dist/
+build/
+coverage/
+
+.env
+.env.local
+
+Thumbs.db
